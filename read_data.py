@@ -34,7 +34,7 @@ def best_customer():
     WITH orders_per_quarter AS (
       SELECT customer_id, QUARTER(order_date) AS quarter, COUNT(id) as qtd
       FROM sale
-      WHERE order_date BETWEEN '2016-01-01' AND '2017-6-30'
+      WHERE order_date BETWEEN '2016-06-30' AND '2017-6-30'
       GROUP BY customer_id, QUARTER(order_date)
     ),
     customers_with_orders_in_quarter AS (
