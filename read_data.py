@@ -16,7 +16,7 @@ def top_ten_bicycles():
     FROM sale
     LEFT JOIN product ON sale.product_id = product.id
     LEFT JOIN product_subcategory ON product.subcategory_id = product_subcategory.id
-    WHERE category_id = 1 AND order_date >= '2016/01/01'
+    WHERE category_id = 1 AND order_date >= '2015/06/30'
     GROUP BY product_id
     ORDER BY qtd DESC
     LIMIT 10 
